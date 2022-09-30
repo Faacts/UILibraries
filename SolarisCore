@@ -1300,5 +1300,4 @@ function SolarisLib:New(Config)
     end 
     return TabHolder
 end    
-SolarisLib:Notification("UI Loaded!", "Press RightCtrl to toggle UI")
 return SolarisLib
