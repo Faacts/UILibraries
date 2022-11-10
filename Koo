@@ -966,7 +966,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 		if isfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) then
 			local Key = readfile(RayfieldFolder.."/Key System".."/".."/SiriusKey"..".txt")
-			if Key == game:HttpGet("https://1.kelprepl.repl.co/verify/FactsHub?verify_key="..Key) then
+			local Keyy = readfile(RayfieldFolder.."/Key System".."/".."/SiriusKey"..".txt")
+			if Key == game:HttpGet("https://1.kelprepl.repl.co/verify/FactsHub?verify_key="..Keyy) then
 				Passthrough = true
 			end
 		end
