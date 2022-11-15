@@ -9,7 +9,7 @@ local CoreGui = game:GetService("CoreGui")
 local UserId = game.Players.LocalPlayer.UserId
 local uneverseId = game.GameId
 
-local notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/HoyoGey/My-Lua-Project/main/UiLibs/NotifyLib.lua"))()
+local notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Faacts/UILibraries/main/KeySystem/RayfieldNotif"))()
 
 local KeyUI = game:GetObjects("rbxassetid://11447016056")[1]
 
@@ -136,7 +136,7 @@ function Keysys:MakeUI(KeySettings)
 
     KeyMain.NoteMessage.DiscordBtn.MouseEnter:Connect(function()
         TweenService:Create(KeyMain.NoteMessage.DiscordBtn, TweenInfo.new(0.6, Enum.EasingStyle.Quint),
-            { TextColor3 = Color3.fromRGB(23, 30, 227) }):Play()
+            { TextColor3 = Color3.fromRGB(240, 240, 240) }):Play()
     end)
 
     KeyMain.NoteMessage.DiscordBtn.MouseLeave:Connect(function()
