@@ -989,7 +989,20 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end)
 
 		if not Passthrough then            
-			RayfieldLibrary:Notify({Title = "Error!", Content = "The Key has changed, Get a new one!", Duration = 7})
+			Rayfield:Notify({
+				Title = "Error!",
+				Content = "The Key has changed, Get a new one!",
+				Duration = 7,
+				Image = 4483362458,
+				Actions = { -- Notification Buttons
+					Ignore = {
+						Name = "Copy Link!",
+						Callback = function()
+							setclipboard("https://1.kelprepl.repl.co/getkey/FactsHub")
+						end
+					},
+				},
+			})
 		else
 			Passthrough = true
 		end
