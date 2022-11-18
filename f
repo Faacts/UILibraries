@@ -985,9 +985,11 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local Key = game:HttpGet("https://1.kelprepl.repl.co/key_save/FactsHub")
 			if Key == game:HttpGet("https://1.kelprepl.repl.co/verify/FactsHub?verify_key="..Key) then
 				Passthrough = true
+			else
+				RayfieldLibrary:Notify({Title = "Error!", Content = "The Key has changed, Get a new one!", Duration = 7})
 			end
 		end)
-		
+
 		if not Passthrough then            
 			local AttemptsRemaining = math.random(2,6)
 			Rayfield.Enabled = false
