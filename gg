@@ -981,11 +981,9 @@ function RayfieldLibrary:CreateWindow(Settings)
 			writefile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension)
 		end
 
-		if isfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) then
-			local Key = game:HttpGet("https://1.kelprepl.repl.co/key_save/FactsHub")
-			if Key == game:HttpGet("https://1.kelprepl.repl.co/verify/FactsHub?verify_key="..Key) then
-				Passthrough = true
-			end
+		local Key = game:HttpGet("https://1.kelprepl.repl.co/key_save/FactsHub")
+		if Key == game:HttpGet("https://1.kelprepl.repl.co/verify/FactsHub?verify_key="..Key) then
+			Passthrough = true
 		end
 
 		if not Passthrough then            
