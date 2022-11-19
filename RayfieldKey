@@ -989,7 +989,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end)
 
 		if not Passthrough then            
-			RayfieldLibrary:Notify({Title = "Error!", Content = "The Key has changed, Link Copied to Clipboard!", Duration = 7})
 			setclipboard("https://1.kelprepl.repl.co/getkey/FactsHub")
 			local AttemptsRemaining = math.random(2,6)
 			Rayfield.Enabled = false
