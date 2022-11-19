@@ -978,8 +978,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end
 
 		if isfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) then
-			local Key = readfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension)
-			if Key == game:HttpGet("https://1.kelprepl.repl.co/verify/FactsHub?verify_key="..Key) or Key == "SUg7brH2XL6uE86JaYjne49Z2tyM36j9" then
+			if readfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) == Settings.KeySettings.Key then
 				Passthrough = true
 			end
 		end
@@ -987,7 +986,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		if not Passthrough then
 			local AttemptsRemaining = math.random(2,6)
 			Rayfield.Enabled = false
-			local KeyUI = game:GetObjects("rbxassetid://11380036235")[1]
+			local KeyUI = game:GetObjects("rbxassetid://11608117621")[1]
 
 			if gethui then
 				KeyUI.Parent = gethui()
@@ -1052,7 +1051,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 			KeyUI.Main.Input.InputBox.FocusLost:Connect(function()
 				pcall(function()
-					if KeyMain.Input.InputBox.Text == game:HttpGet("https://1.kelprepl.repl.co/verify/FactsHub?verify_key="..KeyMain.Input.InputBox.Text) or KeyMain.Input.InputBox.Text == "SUg7brH2XL6uE86JaYjne49Z2tyM36j9" then
+					if KeyMain.Input.InputBox.Text == game:HttpGet("https://1.kelprepl.repl.co/verify/FactsHub?verify_key="..KeyMain.Input.InputBox.Text) then
 						TweenService:Create(KeyMain, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundTransparency = 1}):Play()
 						TweenService:Create(KeyMain, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 467, 0, 175)}):Play()
 						TweenService:Create(KeyMain.Shadow.Image, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {ImageTransparency = 1}):Play()
