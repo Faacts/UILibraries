@@ -1068,7 +1068,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 			end
 		end
 
-		Passthrough = true
 
 		if not Passthrough then
 			local AttemptsRemaining = math.random(2,6)
