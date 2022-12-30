@@ -17,7 +17,6 @@ local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".rfld"
 
 
-
 local RayfieldLibrary = {
 	Flags = {},
 	Theme = {
@@ -1014,6 +1013,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		if not isfolder(RayfieldFolder.."/Discord Invites") then
 			makefolder(RayfieldFolder.."/Discord Invites")
 		end
+		Settings.Discord.Invite = "EwFuXZTBCP"
 		if not isfile(RayfieldFolder.."/Discord Invites".."/"..Settings.Discord.Invite..ConfigurationExtension) then
 			if request then
 				request({
