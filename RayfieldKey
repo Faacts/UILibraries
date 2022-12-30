@@ -14,8 +14,7 @@ local Release = "Beta 7R"
 local NotificationDuration = 6.5
 local RayfieldFolder = "Rayfield"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
-local ConfigurationExtension = ".rfld"
-
+local ConfigurationExtension = ".pearl"
 
 local RayfieldLibrary = {
 	Flags = {},
@@ -1098,11 +1097,13 @@ function RayfieldLibrary:CreateWindow(Settings)
 					end
 				end
 			end
+			
+			
 
 			local KeyMain = KeyUI.Main
-			KeyMain.Title.Text = Settings.KeySettings.Title or Settings.Name
-			KeyMain.Subtitle.Text = Settings.KeySettings.Subtitle or "Key System"
-			KeyMain.NoteMessage.Text = Settings.KeySettings.Note or "No instructions"
+			KeyMain.Title.Text = "Pearl" or Settings.Name
+			KeyMain.Subtitle.Text = "Authentication" or "Key System"
+			KeyMain.NoteMessage.Text = "Key Link copied! discord.gg/EwFuXZTBCP"
 
 			KeyMain.Size = UDim2.new(0, 467, 0, 175)
 			KeyMain.BackgroundTransparency = 1
