@@ -1137,7 +1137,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 			KeyUI.Main.Input.InputBox.FocusLost:Connect(function()
 				pcall(function()
-					if KeyMain.Input.InputBox.Text == loadstring(game:HttpGet("https://raw.githubusercontent.com/Faacts/FactsHub/main/Side/key")) then
+					if KeyMain.Input.InputBox.Text == "Happy2023" then
 						TweenService:Create(KeyMain, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundTransparency = 1}):Play()
 						TweenService:Create(KeyMain, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 467, 0, 175)}):Play()
 						TweenService:Create(KeyMain.EShadow, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {ImageTransparency = 1}):Play()
