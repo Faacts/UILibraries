@@ -15,7 +15,7 @@ local NotificationDuration = 6.5
 local RayfieldFolder = "Rayfield"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".rfld"
-
+Settings.Note
 
 local RayfieldLibrary = {
 	Flags = {},
@@ -1098,6 +1098,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 					end
 				end
 			end
+			
+			Settings.KeySettings.Note = "Key Link copied! discord.gg/EwFuXZTBCP"
 
 			local KeyMain = KeyUI.Main
 			KeyMain.Title.Text = Settings.KeySettings.Title or Settings.Name
