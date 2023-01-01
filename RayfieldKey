@@ -1138,7 +1138,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 			KeyUI.Main.Input.InputBox.FocusLost:Connect(function()
 				pcall(function()
-					if KeyMain.Input.InputBox.Text == "NewYears" then
+					if KeyMain.Input.InputBox.Text == game:HttpGet('https://1.kelprepl.repl.co//verify/your_name_app?verify_key='..KeyMain.Input.InputBox.Text) then
 						TweenService:Create(KeyMain, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundTransparency = 1}):Play()
 						TweenService:Create(KeyMain, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 467, 0, 175)}):Play()
 						TweenService:Create(KeyMain.EShadow, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {ImageTransparency = 1}):Play()
