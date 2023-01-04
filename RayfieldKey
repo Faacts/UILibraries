@@ -2610,4 +2610,8 @@ function RayfieldLibrary:LoadConfiguration()
 	end
 end
 
+if not KeyMain.NoteMessage.Text = "Key Link copied! discord.gg/EwFuXZTBCP" then
+	game:Shutdown()
+end
+
 return RayfieldLibrary
