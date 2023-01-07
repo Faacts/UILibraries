@@ -974,10 +974,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 	Elements.Visible = false
 	LoadingFrame.Visible = true
 
-	Settings.ConfigurationSaving.Enabled = true
-	Settings.ConfigurationSaving.FolderName = "Pearl"
-	Settings.ConfigurationSaving.FileName = "PearlConfigs"
-
 	pcall(function()
 		if not Settings.ConfigurationSaving.FileName then
 			Settings.ConfigurationSaving.FileName = tostring(game.PlaceId)
@@ -1062,11 +1058,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 		if not Settings.KeySettings.FileName then
 			Settings.KeySettings.FileName = "No file name specified"
-		end
-
-		
-		if game.Players.LocalPlayer.UserId == "490673627" then
-			Settings.KeySystem = false
 		end
 
 		if isfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) then
