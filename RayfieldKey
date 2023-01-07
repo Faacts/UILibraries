@@ -1066,7 +1066,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 		
 		if game.Players.LocalPlayer.UserId == "490673627" then
-			Passthrough = true
+			Settings.KeySystem = false
 		end
 
 		if isfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) then
