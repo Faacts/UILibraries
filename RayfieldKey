@@ -974,6 +974,9 @@ function RayfieldLibrary:CreateWindow(Settings)
 	Elements.Visible = false
 	LoadingFrame.Visible = true
 
+	Settings.ConfigurationSaving.Enabled = true
+	Settings.ConfigurationSaving.FolderName = "Pearl"
+	Settings.ConfigurationSaving.FileName = "PearlConfigs"
 
 	pcall(function()
 		if not Settings.ConfigurationSaving.FileName then
