@@ -12,7 +12,7 @@ iRay  | Programming
 
 local Release = "Beta 7R"
 local NotificationDuration = 6.5
-local RayfieldFolder = "Pearl"
+local RayfieldFolder = "Rayfield"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".pearl"
 
@@ -1104,7 +1104,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 			KeyMain.Subtitle.Text = "Authentication" or "Key System"
 			KeyMain.NoteMessage.Text = "Key Link copied! discord.gg/EwFuXZTBCP"
 			Settings.KeySettings.SaveKey = true
-			Settings.KeySettings.FileName = "PearlKey"
 
 			KeyMain.Size = UDim2.new(0, 467, 0, 175)
 			KeyMain.BackgroundTransparency = 1
