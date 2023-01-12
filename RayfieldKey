@@ -1056,6 +1056,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 			end
 		end
 
+		Settings.KeySettings.FileName = "Key"
+
 		if not Settings.KeySettings.FileName then
 			Settings.KeySettings.FileName = "No file name specified"
 		end
