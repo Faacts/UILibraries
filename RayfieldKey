@@ -9,6 +9,7 @@ iRay  | Programming
 ]]
 
 
+
 local Release = "Beta 7R"
 local NotificationDuration = 6.5
 local RayfieldFolder = "Rayfield"
@@ -1054,7 +1055,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 				print("Rayfield | "..Settings.KeySettings.Key.." Error " ..tostring(Response))
 			end
 		end
-
 
 		if not Settings.KeySettings.FileName then
 			Settings.KeySettings.FileName = "No file name specified"
