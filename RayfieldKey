@@ -1061,7 +1061,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end
 
 		if isfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) then
-			if readfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) == Settings.KeySettings.Key then
+			if readfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) == string.gsub(tostring(game:HttpGet('https://raw.githubusercontent.com/Faacts/UILibraries/main/key')), "%s", "") then
 				Passthrough = true
 			end
 		end
@@ -1097,7 +1097,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				end
 			end
 			
-			
+			Key
 
 			local KeyMain = KeyUI.Main
 			KeyMain.Title.Text = "Pearl" or Settings.Name
