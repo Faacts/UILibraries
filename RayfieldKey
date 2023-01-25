@@ -1063,6 +1063,9 @@ function RayfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(KeyMain.NoteTitle, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 					TweenService:Create(KeyMain.NoteMessage, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 					TweenService:Create(KeyMain.Hide, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {ImageTransparency = 1}):Play()
+					delay(.4,function()
+						KeyMain.Hide.Visible = false
+					end)
 					wait(0.51)
 					Passthrough = true
 					if Settings.KeySettings.SaveKey then
